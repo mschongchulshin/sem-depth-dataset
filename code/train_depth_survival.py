@@ -8,7 +8,7 @@ import time
 import numpy as np
 
 
-ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.environ.get("SEM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DEFAULT_CACHE = ("/private/tmp/claude-501/-Users-hongchulshin/"
                  "1c78f3b9-27cc-4bf5-ad58-b616b56ba9e3/scratchpad/depthcache")
 ARM_NAMES = ("M", "P", "S", "B", "Pperm")

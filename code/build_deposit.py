@@ -1,7 +1,7 @@
 import collections, glob, hashlib, json, os
 import numpy as np
 
-ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.environ.get("SEM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 REL = f"{ROOT}/release"
 V = json.load(open(f"{ROOT}/cache/validation_results.json"))
 

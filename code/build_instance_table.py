@@ -1,7 +1,7 @@
 import argparse, json, os, glob, sys
 import numpy as np
 
-ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.environ.get("SEM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SPHERE = 4.0 / 3.0 / np.sqrt(np.pi)
 
 GEO = {

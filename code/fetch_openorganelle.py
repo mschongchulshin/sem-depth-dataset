@@ -120,7 +120,7 @@ def main():
     ap.add_argument("--crops", nargs="+", default=["crop1"])
     ap.add_argument("--classes", nargs="+",
                     default=["cell", "mito", "er", "nuc", "golgi", "ves", "lyso", "ld", "endo"])
-    ap.add_argument("--out", default="${EM_DEPTH_ROOT}/raw")
+    ap.add_argument("--out", default="${SEM_DEPTH_ROOT}/raw")
     ap.add_argument("--list-crops", action="store_true")
     a = ap.parse_args()
 

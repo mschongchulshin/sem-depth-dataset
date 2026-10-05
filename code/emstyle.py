@@ -123,7 +123,7 @@ def legend_row(fig, entries, y=None, fs=6.6, ncol=None, reserve=True):
                handlelength=1.1, handleheight=0.8, columnspacing=1.6)
 
 
-def save(fig, name, outdir="${EM_DEPTH_ROOT}/paper/figures"):
+def save(fig, name, outdir="${SEM_DEPTH_ROOT}/paper/figures"):
     from pathlib import Path
     p = Path(outdir); p.mkdir(parents=True, exist_ok=True)
     fig.savefig(p / f"{name}.svg")

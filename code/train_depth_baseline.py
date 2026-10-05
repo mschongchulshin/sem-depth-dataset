@@ -1,7 +1,7 @@
 import argparse, collections, glob, json, os, time
 import numpy as np
 
-ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.environ.get("SEM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def build_index(limit_per_vol=900, min_fg=0.04, crop=256):

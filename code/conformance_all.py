@@ -1,7 +1,7 @@
 import collections, glob, json, os, sys
 import numpy as np
 
-ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.environ.get("SEM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 REL = f"{ROOT}/release"
 RAY = ("depth_below_steps", "own_occupancy_below_steps", "thickness_below_steps")
 DTYPE = {"em": "uint8", "inst_face": "int32", "cls_face": "uint8", "mask": "bool",

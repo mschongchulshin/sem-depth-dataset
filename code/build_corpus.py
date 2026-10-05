@@ -13,7 +13,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(os.environ.get("EM_DEPTH_ROOT", Path(__file__).resolve().parent.parent))
+ROOT = Path(os.environ.get("SEM_DEPTH_ROOT", Path(__file__).resolve().parent.parent))
 CODE = ROOT / "code"
 
 STAGE = Path("/private/tmp/em-depth-stage")

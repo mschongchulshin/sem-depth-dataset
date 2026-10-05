@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patheffects as pe
 from scipy import ndimage
 
-ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.environ.get("SEM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = f"{ROOT}/paper/figures"
 FOV_NM = 2400.0
 

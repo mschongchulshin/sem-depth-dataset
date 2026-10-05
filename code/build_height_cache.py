@@ -1,7 +1,7 @@
 import argparse, json, os, sys
 import numpy as np
 
-ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.environ.get("SEM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = ("/private/tmp/claude-501/-Users-hongchulshin/"
        "1c78f3b9-27cc-4bf5-ad58-b616b56ba9e3/scratchpad/heightcache")
 CROP = 256
