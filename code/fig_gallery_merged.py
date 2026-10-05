@@ -8,7 +8,7 @@ from matplotlib import colors as mcolors, ticker as mticker
 from matplotlib.cm import ScalarMappable
 from scipy import ndimage
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FOV_NM = 2400.0
 CELL_PX = 288
 

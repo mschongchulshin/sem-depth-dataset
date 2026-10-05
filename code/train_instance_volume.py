@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import DataLoader, Dataset
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SPHERE = 4.0 / 3.0 / np.sqrt(np.pi)
 GEO = {"blockface": ("em", "inst_face"), "thinsection": ("image", "inst_section"),
        "surface": ("se", "inst_front")}

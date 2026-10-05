@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patheffects as pe
 from matplotlib.ticker import MultipleLocator
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 emstyle.apply()
 

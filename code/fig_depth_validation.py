@@ -1,3 +1,4 @@
+import os
 import json
 import numpy as np
 import matplotlib.pyplot as plt
@@ -5,7 +6,7 @@ import matplotlib.pyplot as plt
 import emstyle
 from emstyle import DEPTH, OTHER, BOX, INK, GREY, PALE
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 R = json.load(open(f"{ROOT}/cache/validation_results.json"))
 
 emstyle.apply()

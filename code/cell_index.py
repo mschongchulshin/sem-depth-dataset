@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from n5 import N5Array
 from fetch_wholecell import seg_url
 
-ROOT = Path("/Volumes/One Touch/em-depth-dataset")
+ROOT = Path(os.environ.get("EM_DEPTH_ROOT", Path(__file__).resolve().parent.parent))
 OUT = ROOT / "cache" / "cells.json"
 
 MIN_NUCLEUS_UM3 = 5.0

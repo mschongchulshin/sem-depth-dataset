@@ -1,7 +1,7 @@
 import glob, json, os, sys
 import numpy as np
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = f"{ROOT}/release/blockface"
 RAY = ("depth_below_nm", "own_occupancy_below_nm", "thickness_below_nm")
 KEEP = ("em", "inst_face", "cls_face", "mask", "clipped")

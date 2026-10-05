@@ -2,7 +2,7 @@ import hashlib, json, os, sys
 from collections import Counter, defaultdict
 import numpy as np
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DEP = f"{ROOT}/release/blockface"
 
 

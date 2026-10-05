@@ -1,7 +1,7 @@
 import glob, json, os, sys
 import numpy as np
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SPHERE = 4.0 / 3.0 / np.sqrt(np.pi)
 BAD = ("touches_face_border", "clipped_at_block_bottom")
 EXTRA = ("depth_below_nm_median", "thickness_below_nm_median", "face_feret_nm",

@@ -1,7 +1,7 @@
 import argparse, json, os, sys, time
 import numpy as np
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, f"{ROOT}/autoresearch")
 sys.path.insert(0, f"{ROOT}/code")
 from harness import Data

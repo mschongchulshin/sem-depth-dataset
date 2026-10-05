@@ -1,7 +1,7 @@
 import collections, json, os, sys
 import numpy as np
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 TABLE = sys.argv[1] if len(sys.argv) > 1 else "cache/inst_bf_exact_full.jsonl"
 SPHERE_LOG = np.log(4.0 / 3.0 / np.sqrt(np.pi))
 MIN_TEST = 300

@@ -1,7 +1,7 @@
 import os, re, signal, subprocess, sys, time
 from collections import deque
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FREE_GB_FLOOR = float(os.environ.get("AG_FREE_FLOOR_GB", 6))
 SWAP_GROWTH_MB = float(os.environ.get("AG_SWAP_GROWTH_MB", 200))
 HARD_FLOOR_GB = float(os.environ.get("AG_HARD_FLOOR_GB", 4))

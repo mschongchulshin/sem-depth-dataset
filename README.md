@@ -31,6 +31,14 @@ Images and voxel-wise organelle labels come from eighteen whole-cell reconstruct
 under CC-BY-4.0 by OpenOrganelle and the Janelia COSEM project. The scripts read them from the
 public multiscale arrays; nothing in this repository redistributes them.
 
+## Data root
+
+Every script reads the deposit through the `EM_DEPTH_ROOT` environment variable, which points at the directory holding `blockface/`, `release/` and `MANIFEST.json`. Without it the scripts fall back to the parent of this `code/` directory.
+
+```
+export EM_DEPTH_ROOT=/path/to/em-depth-dataset
+```
+
 ## Requirements
 
 Python 3.10 or later with `numpy`, `scipy`, `pandas`, `pyarrow`, `matplotlib`, `zarr` and

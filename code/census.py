@@ -1,3 +1,4 @@
+import os
 import argparse
 import json
 from concurrent.futures import ThreadPoolExecutor
@@ -9,7 +10,7 @@ from fetch_openorganelle import list_children
 from n5 import N5Array
 
 BUCKET = "https://janelia-cosem-datasets.s3.amazonaws.com"
-ROOT = Path("/Volumes/One Touch/em-depth-dataset")
+ROOT = Path(os.environ.get("EM_DEPTH_ROOT", Path(__file__).resolve().parent.parent))
 TIER_NM = {"fine": 4.0, "mid": 8.0, "coarse": 16.0}
 CELL_VOL_FLOOR_UM3 = 10.0
 

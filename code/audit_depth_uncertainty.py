@@ -1,9 +1,10 @@
+import os
 import collections, json
 import numpy as np
 
 CACHE = ("/private/tmp/claude-501/-Users-hongchulshin/"
          "1c78f3b9-27cc-4bf5-ad58-b616b56ba9e3/scratchpad/depthcache")
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def main():

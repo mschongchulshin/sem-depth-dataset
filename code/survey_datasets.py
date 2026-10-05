@@ -31,7 +31,7 @@ def probe(ds):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default="/Volumes/One Touch/em-depth-dataset/cache/survey.json")
+    ap.add_argument("--out", default="${EM_DEPTH_ROOT}/cache/survey.json")
     ap.add_argument("--workers", type=int, default=10)
     a = ap.parse_args()
 

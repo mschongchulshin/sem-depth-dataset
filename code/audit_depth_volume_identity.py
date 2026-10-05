@@ -1,7 +1,7 @@
 import collections, glob, json, os, sys
 import numpy as np
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 def _excluded():
     import json as _j, os as _o

@@ -6,7 +6,7 @@ from matplotlib.patches import FancyBboxPatch, Rectangle
 import emstyle
 from emstyle import DEPTH, OTHER, INK, GREY, PALE, SPECIMEN
 
-ROOT = "/Volumes/One Touch/em-depth-dataset"
+ROOT = os.environ.get("EM_DEPTH_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 R = json.load(open(f"{ROOT}/cache/validation_results.json"))
 
 emstyle.apply()

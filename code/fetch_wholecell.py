@@ -36,7 +36,7 @@ def em_urls(dataset):
         yield f"{BUCKET}/{dataset}/{dataset}{ext}/{path}"
 
 
-CACHE = Path("/Volumes/One Touch/em-depth-dataset/cache")
+CACHE = Path("${EM_DEPTH_ROOT}/cache")
 
 
 def instance_volume_table(dataset, organelle, level="s4"):
@@ -235,7 +235,7 @@ def main():
                     help="level the density search runs at; s4 is too coarse and misplaces the box")
     ap.add_argument("--anchor", default=None,
                     help="organelle whose density picks the box; default the first one")
-    ap.add_argument("--out", default="/Volumes/One Touch/em-depth-dataset/raw")
+    ap.add_argument("--out", default="${EM_DEPTH_ROOT}/raw")
     ap.add_argument("--name", default=None)
     a = ap.parse_args()
 
