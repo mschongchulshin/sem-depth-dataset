@@ -24,7 +24,7 @@ carries the description of what each step does.
 | `code/fig_record.py` | Figure 2 |
 | `code/fig_corpus.py` | Figure 3 |
 | `code/fig_depth_validation.py` | Figure 4 |
-| `code/upload_zenodo.py` | uploads the deposit |
+| `code/upload_figshare.py` | uploads the deposit, each file in parallel parts |
 
 ## Source data
 
